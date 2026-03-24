@@ -1,0 +1,21 @@
+{
+	"file": "../benchmarks/Debug/benchmarks.out",
+	"starting_function": "mulhi3",
+	"timing_sensitive": true,
+	"parameters": [
+		{
+			"size": 1,
+			"confidential": true
+		},
+		{
+			"size": 1,
+			"confidential": true
+		}
+	],
+	"memory": false,
+	"result": {
+		"size": 1,
+		"confidential": true,
+		"memory": false
+	}
+}

@@ -1,0 +1,426 @@
+                             MOV @r6+,r5 2 2 2
+                              MOV @r6,r5 2 2 2
+                               MOV r5,r5 1 1 1
+                            ADDC @r6+,r5 2 2 2
+                             ADDC @r6,r5 2 2 2
+                              ADDC r5,r5 1 1 1
+                             SUB @r6+,r5 2 2 2
+                              SUB @r6,r5 2 2 2
+                               SUB r5,r5 1 1 1
+                             ADD @r6+,r5 2 2 2
+                              ADD @r6,r5 2 2 2
+                               ADD r5,r5 1 1 1
+                             AND @r6+,r5 2 2 2
+                              AND @r6,r5 2 2 2
+                               AND r5,r5 1 1 1
+                            SUBC @r6+,r5 2 2 2
+                             SUBC @r6,r5 2 2 2
+                              SUBC r5,r5 1 1 1
+                             XOR @r6+,r5 2 2 2
+                              XOR @r6,r5 2 2 2
+                               XOR r5,r5 1 1 1
+                             BIC @r6+,r5 2 2 2
+                              BIC @r6,r5 2 2 2
+                               BIC r5,r5 1 1 1
+                             BIT @r6+,r5 2 2 2
+                              BIT @r6,r5 2 2 2
+                               BIT r5,r5 1 1 1
+                            DADD @r6+,r5 2 2 2
+                             DADD @r6,r5 2 2 2
+                              DADD r5,r5 1 1 1
+                             BIS @r6+,r5 2 2 2
+                              BIS @r6,r5 2 2 2
+                               BIS r5,r5 1 1 1
+                             CMP @r6+,r5 2 2 2
+                              CMP @r6,r5 2 2 2
+                               CMP r5,r5 1 1 1
+                                RRA @r6+ 3 3 3
+                                 RRA @r6 3 3 3
+                                  RRA r5 1 1 1
+                                RRC @r6+ 3 3 3
+                                 RRC @r6 3 3 3
+                                  RRC r5 1 1 1
+                                SXT @r6+ 3 3 3
+                                 SXT @r6 3 3 3
+                                  SXT r5 1 1 1
+                               SWPB @r6+ 3 3 3
+                                SWPB @r6 3 3 3
+                                 SWPB r5 1 1 1
+                               PUSH @r6+ 3 3 3
+                                PUSH @r6 3 3 3
+                                 PUSH r5 3 3 2    xx
+                            JMP target_0 2 2 2
+                             JL target_1 2 2 2
+                            JEQ target_2 2 2 2
+                             JN target_3 2 2 2
+                            JNZ target_4 2 2 2
+                             JZ target_5 2 2 2
+                            JGE target_6 2 2 2
+                             JC target_7 2 2 2
+                            JNC target_8 2 2 2
+                            JNE target_9 2 2 2
+                               MOV #1,r5 2 1 1 !!
+                              ADDC #1,r5 2 1 1 !!
+                               SUB #1,r5 2 1 1 !!
+                               ADD #1,r5 2 1 1 !!
+                               AND #1,r5 2 1 1 !!
+                              SUBC #1,r5 2 1 1 !!
+                               XOR #1,r5 2 1 1 !!
+                               BIC #1,r5 2 1 1 !!
+                               BIT #1,r5 2 1 1 !!
+                              DADD #1,r5 2 1 1 !!
+                               BIS #1,r5 2 1 1 !!
+                               CMP #1,r5 2 1 1 !!
+                                 PUSH #1 3 3 2    xx
+                            MOV 2(r6),r5 3 3 3
+                           ADDC 2(r6),r5 3 3 3
+                            SUB 2(r6),r5 3 3 3
+                            ADD 2(r6),r5 3 3 3
+                            AND 2(r6),r5 3 3 3
+                           SUBC 2(r6),r5 3 3 3
+                            XOR 2(r6),r5 3 3 3
+                            BIC 2(r6),r5 3 3 3
+                            BIT 2(r6),r5 3 3 3
+                           DADD 2(r6),r5 3 3 3
+                            BIS 2(r6),r5 3 3 3
+                            CMP 2(r6),r5 3 3 3
+                  MOV @r6+,&RAM_LOCATION 4 4 3    xx
+                 MOV @r6+,&FRAM_LOCATION 4 4 3    xx
+                          MOV @r6+,0(r6) 4 4 3    xx
+                    MOV &RAM_LOCATION,r5 3 3 3
+                   MOV &FRAM_LOCATION,r5 3 3 3
+                              MOV #42,r5 2 2 1    xx
+                   MOV @r6,&RAM_LOCATION 4 4 3    xx
+                  MOV @r6,&FRAM_LOCATION 4 4 3    xx
+                           MOV @r6,0(r6) 4 4 3    xx
+                    MOV r5,&RAM_LOCATION 3 3 2    xx
+                   MOV r5,&FRAM_LOCATION 3 3 2    xx
+                            MOV r5,0(r6) 3 3 2    xx
+                 ADDC @r6+,&RAM_LOCATION 5 5 5
+                ADDC @r6+,&FRAM_LOCATION 5 5 5
+                         ADDC @r6+,0(r6) 5 5 5
+                   ADDC &RAM_LOCATION,r5 3 3 3
+                  ADDC &FRAM_LOCATION,r5 3 3 3
+                             ADDC #42,r5 2 2 1    xx
+                  ADDC @r6,&RAM_LOCATION 5 5 5
+                 ADDC @r6,&FRAM_LOCATION 5 5 5
+                          ADDC @r6,0(r6) 5 5 5
+                   ADDC r5,&RAM_LOCATION 4 4 4
+                  ADDC r5,&FRAM_LOCATION 4 4 4
+                           ADDC r5,0(r6) 4 4 4
+                  SUB @r6+,&RAM_LOCATION 5 5 5
+                 SUB @r6+,&FRAM_LOCATION 5 5 5
+                          SUB @r6+,0(r6) 5 5 5
+                    SUB &RAM_LOCATION,r5 3 3 3
+                   SUB &FRAM_LOCATION,r5 3 3 3
+                              SUB #42,r5 2 2 1    xx
+                   SUB @r6,&RAM_LOCATION 5 5 5
+                  SUB @r6,&FRAM_LOCATION 5 5 5
+                           SUB @r6,0(r6) 5 5 5
+                    SUB r5,&RAM_LOCATION 4 4 4
+                   SUB r5,&FRAM_LOCATION 4 4 4
+                            SUB r5,0(r6) 4 4 4
+                  ADD @r6+,&RAM_LOCATION 5 5 5
+                 ADD @r6+,&FRAM_LOCATION 5 5 5
+                          ADD @r6+,0(r6) 5 5 5
+                    ADD &RAM_LOCATION,r5 3 3 3
+                   ADD &FRAM_LOCATION,r5 3 3 3
+                              ADD #42,r5 2 2 1    xx
+                   ADD @r6,&RAM_LOCATION 5 5 5
+                  ADD @r6,&FRAM_LOCATION 5 5 5
+                           ADD @r6,0(r6) 5 5 5
+                    ADD r5,&RAM_LOCATION 4 4 4
+                   ADD r5,&FRAM_LOCATION 4 4 4
+                            ADD r5,0(r6) 4 4 4
+                  AND @r6+,&RAM_LOCATION 5 5 5
+                 AND @r6+,&FRAM_LOCATION 5 5 5
+                          AND @r6+,0(r6) 5 5 5
+                    AND &RAM_LOCATION,r5 3 3 3
+                   AND &FRAM_LOCATION,r5 3 3 3
+                              AND #42,r5 2 2 1    xx
+                   AND @r6,&RAM_LOCATION 5 5 5
+                  AND @r6,&FRAM_LOCATION 5 5 5
+                           AND @r6,0(r6) 5 5 5
+                    AND r5,&RAM_LOCATION 4 4 4
+                   AND r5,&FRAM_LOCATION 4 4 4
+                            AND r5,0(r6) 4 4 4
+                 SUBC @r6+,&RAM_LOCATION 5 5 5
+                SUBC @r6+,&FRAM_LOCATION 5 5 5
+                         SUBC @r6+,0(r6) 5 5 5
+                   SUBC &RAM_LOCATION,r5 3 3 3
+                  SUBC &FRAM_LOCATION,r5 3 3 3
+                             SUBC #42,r5 2 2 1    xx
+                  SUBC @r6,&RAM_LOCATION 5 5 5
+                 SUBC @r6,&FRAM_LOCATION 5 5 5
+                          SUBC @r6,0(r6) 5 5 5
+                   SUBC r5,&RAM_LOCATION 4 4 4
+                  SUBC r5,&FRAM_LOCATION 4 4 4
+                           SUBC r5,0(r6) 4 4 4
+                  XOR @r6+,&RAM_LOCATION 5 5 5
+                 XOR @r6+,&FRAM_LOCATION 5 5 5
+                          XOR @r6+,0(r6) 5 5 5
+                    XOR &RAM_LOCATION,r5 3 3 3
+                   XOR &FRAM_LOCATION,r5 3 3 3
+                              XOR #42,r5 2 2 1    xx
+                   XOR @r6,&RAM_LOCATION 5 5 5
+                  XOR @r6,&FRAM_LOCATION 5 5 5
+                           XOR @r6,0(r6) 5 5 5
+                    XOR r5,&RAM_LOCATION 4 4 4
+                   XOR r5,&FRAM_LOCATION 4 4 4
+                            XOR r5,0(r6) 4 4 4
+                  BIC @r6+,&RAM_LOCATION 5 5 5
+                 BIC @r6+,&FRAM_LOCATION 5 5 5
+                          BIC @r6+,0(r6) 5 5 5
+                    BIC &RAM_LOCATION,r5 3 3 3
+                   BIC &FRAM_LOCATION,r5 3 3 3
+                              BIC #42,r5 2 2 1    xx
+                   BIC @r6,&RAM_LOCATION 5 5 5
+                  BIC @r6,&FRAM_LOCATION 5 5 5
+                           BIC @r6,0(r6) 5 5 5
+                    BIC r5,&RAM_LOCATION 4 4 4
+                   BIC r5,&FRAM_LOCATION 4 4 4
+                            BIC r5,0(r6) 4 4 4
+                  BIT @r6+,&RAM_LOCATION 4 4 4
+                 BIT @r6+,&FRAM_LOCATION 4 4 4
+                          BIT @r6+,0(r6) 4 4 4
+                    BIT &RAM_LOCATION,r5 3 3 3
+                   BIT &FRAM_LOCATION,r5 3 3 3
+                              BIT #42,r5 2 2 1    xx
+                   BIT @r6,&RAM_LOCATION 4 4 4
+                  BIT @r6,&FRAM_LOCATION 4 4 4
+                           BIT @r6,0(r6) 4 4 4
+                    BIT r5,&RAM_LOCATION 3 3 3
+                   BIT r5,&FRAM_LOCATION 3 3 3
+                            BIT r5,0(r6) 3 3 3
+                 DADD @r6+,&RAM_LOCATION 5 5 5
+                DADD @r6+,&FRAM_LOCATION 5 5 5
+                         DADD @r6+,0(r6) 5 5 5
+                   DADD &RAM_LOCATION,r5 3 3 3
+                  DADD &FRAM_LOCATION,r5 3 3 3
+                             DADD #42,r5 2 2 1    xx
+                  DADD @r6,&RAM_LOCATION 5 5 5
+                 DADD @r6,&FRAM_LOCATION 5 5 5
+                          DADD @r6,0(r6) 5 5 5
+                   DADD r5,&RAM_LOCATION 4 4 4
+                  DADD r5,&FRAM_LOCATION 4 4 4
+                           DADD r5,0(r6) 4 4 4
+                  BIS @r6+,&RAM_LOCATION 5 5 5
+                 BIS @r6+,&FRAM_LOCATION 5 5 5
+                          BIS @r6+,0(r6) 5 5 5
+                    BIS &RAM_LOCATION,r5 3 3 3
+                   BIS &FRAM_LOCATION,r5 3 3 3
+                              BIS #42,r5 2 2 1    xx
+                   BIS @r6,&RAM_LOCATION 5 5 5
+                  BIS @r6,&FRAM_LOCATION 5 5 5
+                           BIS @r6,0(r6) 5 5 5
+                    BIS r5,&RAM_LOCATION 4 4 4
+                   BIS r5,&FRAM_LOCATION 4 4 4
+                            BIS r5,0(r6) 4 4 4
+                  CMP @r6+,&RAM_LOCATION 4 4 4
+                 CMP @r6+,&FRAM_LOCATION 4 4 4
+                          CMP @r6+,0(r6) 4 4 4
+                    CMP &RAM_LOCATION,r5 3 3 3
+                   CMP &FRAM_LOCATION,r5 3 3 3
+                              CMP #42,r5 2 2 1    xx
+                   CMP @r6,&RAM_LOCATION 4 4 4
+                  CMP @r6,&FRAM_LOCATION 4 4 4
+                           CMP @r6,0(r6) 4 4 4
+                    CMP r5,&RAM_LOCATION 3 3 3
+                   CMP r5,&FRAM_LOCATION 3 3 3
+                            CMP r5,0(r6) 3 3 3
+                       RRA &RAM_LOCATION 4 4 4
+                      RRA &FRAM_LOCATION 4 4 4
+                               RRA 0(r6) 4 4 4
+                       RRC &RAM_LOCATION 4 4 4
+                      RRC &FRAM_LOCATION 4 4 4
+                               RRC 0(r6) 4 4 4
+                       SXT &RAM_LOCATION 4 4 4
+                      SXT &FRAM_LOCATION 4 4 4
+                               SXT 0(r6) 4 4 4
+                      SWPB &RAM_LOCATION 4 4 4
+                     SWPB &FRAM_LOCATION 4 4 4
+                              SWPB 0(r6) 4 4 4
+                      PUSH &RAM_LOCATION 4 4 4
+                     PUSH &FRAM_LOCATION 4 4 4
+                                PUSH #42 3 3 2    xx
+                              PUSH 0(r6) 4 4 4
+                    MOV #1,&RAM_LOCATION 4 3 2 !! xx
+                   MOV #1,&FRAM_LOCATION 4 3 2 !! xx
+                            MOV #1,0(r6) 4 3 2 !! xx
+                   ADDC #1,&RAM_LOCATION 5 4 4 !!
+                  ADDC #1,&FRAM_LOCATION 5 4 4 !!
+                           ADDC #1,0(r6) 5 4 4 !!
+                    SUB #1,&RAM_LOCATION 5 4 4 !!
+                   SUB #1,&FRAM_LOCATION 5 4 4 !!
+                            SUB #1,0(r6) 5 4 4 !!
+                    ADD #1,&RAM_LOCATION 5 4 4 !!
+                   ADD #1,&FRAM_LOCATION 5 4 4 !!
+                            ADD #1,0(r6) 5 4 4 !!
+                    AND #1,&RAM_LOCATION 5 4 4 !!
+                   AND #1,&FRAM_LOCATION 5 4 4 !!
+                            AND #1,0(r6) 5 4 4 !!
+                   SUBC #1,&RAM_LOCATION 5 4 4 !!
+                  SUBC #1,&FRAM_LOCATION 5 4 4 !!
+                           SUBC #1,0(r6) 5 4 4 !!
+                    XOR #1,&RAM_LOCATION 5 4 4 !!
+                   XOR #1,&FRAM_LOCATION 5 4 4 !!
+                            XOR #1,0(r6) 5 4 4 !!
+                    BIC #1,&RAM_LOCATION 5 4 4 !!
+                   BIC #1,&FRAM_LOCATION 5 4 4 !!
+                            BIC #1,0(r6) 5 4 4 !!
+                    BIT #1,&RAM_LOCATION 4 3 3 !!
+                   BIT #1,&FRAM_LOCATION 4 3 3 !!
+                            BIT #1,0(r6) 4 3 3 !!
+                   DADD #1,&RAM_LOCATION 5 4 4 !!
+                  DADD #1,&FRAM_LOCATION 5 4 4 !!
+                           DADD #1,0(r6) 5 4 4 !!
+                    BIS #1,&RAM_LOCATION 5 4 4 !!
+                   BIS #1,&FRAM_LOCATION 5 4 4 !!
+                            BIS #1,0(r6) 5 4 4 !!
+                    CMP #1,&RAM_LOCATION 4 3 3 !!
+                   CMP #1,&FRAM_LOCATION 4 3 3 !!
+                            CMP #1,0(r6) 4 3 3 !!
+                 MOV 2(r6),&RAM_LOCATION 5 5 4    xx
+                MOV 2(r6),&FRAM_LOCATION 5 5 4    xx
+                         MOV 2(r6),0(r6) 5 5 4    xx
+                ADDC 2(r6),&RAM_LOCATION 6 6 5    xx
+               ADDC 2(r6),&FRAM_LOCATION 6 6 5    xx
+                        ADDC 2(r6),0(r6) 6 6 5    xx
+                 SUB 2(r6),&RAM_LOCATION 6 6 5    xx
+                SUB 2(r6),&FRAM_LOCATION 6 6 5    xx
+                         SUB 2(r6),0(r6) 6 6 5    xx
+                 ADD 2(r6),&RAM_LOCATION 6 6 5    xx
+                ADD 2(r6),&FRAM_LOCATION 6 6 5    xx
+                         ADD 2(r6),0(r6) 6 6 5    xx
+                 AND 2(r6),&RAM_LOCATION 6 6 5    xx
+                AND 2(r6),&FRAM_LOCATION 6 6 5    xx
+                         AND 2(r6),0(r6) 6 6 5    xx
+                SUBC 2(r6),&RAM_LOCATION 6 6 5    xx
+               SUBC 2(r6),&FRAM_LOCATION 6 6 5    xx
+                        SUBC 2(r6),0(r6) 6 6 5    xx
+                 XOR 2(r6),&RAM_LOCATION 6 6 5    xx
+                XOR 2(r6),&FRAM_LOCATION 6 6 5    xx
+                         XOR 2(r6),0(r6) 6 6 5    xx
+                 BIC 2(r6),&RAM_LOCATION 6 6 5    xx
+                BIC 2(r6),&FRAM_LOCATION 6 6 5    xx
+                         BIC 2(r6),0(r6) 6 6 5    xx
+                 BIT 2(r6),&RAM_LOCATION 5 5 4    xx
+                BIT 2(r6),&FRAM_LOCATION 5 5 4    xx
+                         BIT 2(r6),0(r6) 5 5 4    xx
+                DADD 2(r6),&RAM_LOCATION 6 6 5    xx
+               DADD 2(r6),&FRAM_LOCATION 6 6 5    xx
+                        DADD 2(r6),0(r6) 6 6 5    xx
+                 BIS 2(r6),&RAM_LOCATION 6 6 5    xx
+                BIS 2(r6),&FRAM_LOCATION 6 6 5    xx
+                         BIS 2(r6),0(r6) 6 6 5    xx
+                 CMP 2(r6),&RAM_LOCATION 5 5 4    xx
+                CMP 2(r6),&FRAM_LOCATION 5 5 4    xx
+                         CMP 2(r6),0(r6) 5 5 4    xx
+         MOV &RAM_LOCATION,&RAM_LOCATION 5 5 4    xx
+        MOV &RAM_LOCATION,&FRAM_LOCATION 5 5 4    xx
+        MOV &FRAM_LOCATION,&RAM_LOCATION 5 5 4    xx
+       MOV &FRAM_LOCATION,&FRAM_LOCATION 5 5 4    xx
+                 MOV &RAM_LOCATION,0(r6) 5 5 4    xx
+                MOV &FRAM_LOCATION,0(r6) 5 5 4    xx
+                   MOV #42,&RAM_LOCATION 4 4 3    xx
+                  MOV #42,&FRAM_LOCATION 4 4 3    xx
+                           MOV #42,0(r6) 4 4 3    xx
+        ADDC &RAM_LOCATION,&RAM_LOCATION 6 6 5    xx
+       ADDC &RAM_LOCATION,&FRAM_LOCATION 6 6 5    xx
+       ADDC &FRAM_LOCATION,&RAM_LOCATION 6 6 5    xx
+      ADDC &FRAM_LOCATION,&FRAM_LOCATION 6 6 5    xx
+                ADDC &RAM_LOCATION,0(r6) 6 6 5    xx
+               ADDC &FRAM_LOCATION,0(r6) 6 6 5    xx
+                  ADDC #42,&RAM_LOCATION 5 5 5
+                 ADDC #42,&FRAM_LOCATION 5 5 5
+                          ADDC #42,0(r6) 5 5 5
+         SUB &RAM_LOCATION,&RAM_LOCATION 6 6 5    xx
+        SUB &RAM_LOCATION,&FRAM_LOCATION 6 6 5    xx
+        SUB &FRAM_LOCATION,&RAM_LOCATION 6 6 5    xx
+       SUB &FRAM_LOCATION,&FRAM_LOCATION 6 6 5    xx
+                 SUB &RAM_LOCATION,0(r6) 6 6 5    xx
+                SUB &FRAM_LOCATION,0(r6) 6 6 5    xx
+                   SUB #42,&RAM_LOCATION 5 5 5
+                  SUB #42,&FRAM_LOCATION 5 5 5
+                           SUB #42,0(r6) 5 5 5
+         ADD &RAM_LOCATION,&RAM_LOCATION 6 6 5    xx
+        ADD &RAM_LOCATION,&FRAM_LOCATION 6 6 5    xx
+        ADD &FRAM_LOCATION,&RAM_LOCATION 6 6 5    xx
+       ADD &FRAM_LOCATION,&FRAM_LOCATION 6 6 5    xx
+                 ADD &RAM_LOCATION,0(r6) 6 6 5    xx
+                ADD &FRAM_LOCATION,0(r6) 6 6 5    xx
+                   ADD #42,&RAM_LOCATION 5 5 5
+                  ADD #42,&FRAM_LOCATION 5 5 5
+                           ADD #42,0(r6) 5 5 5
+         AND &RAM_LOCATION,&RAM_LOCATION 6 6 5    xx
+        AND &RAM_LOCATION,&FRAM_LOCATION 6 6 5    xx
+        AND &FRAM_LOCATION,&RAM_LOCATION 6 6 5    xx
+       AND &FRAM_LOCATION,&FRAM_LOCATION 6 6 5    xx
+                 AND &RAM_LOCATION,0(r6) 6 6 5    xx
+                AND &FRAM_LOCATION,0(r6) 6 6 5    xx
+                   AND #42,&RAM_LOCATION 5 5 5
+                  AND #42,&FRAM_LOCATION 5 5 5
+                           AND #42,0(r6) 5 5 5
+        SUBC &RAM_LOCATION,&RAM_LOCATION 6 6 5    xx
+       SUBC &RAM_LOCATION,&FRAM_LOCATION 6 6 5    xx
+       SUBC &FRAM_LOCATION,&RAM_LOCATION 6 6 5    xx
+      SUBC &FRAM_LOCATION,&FRAM_LOCATION 6 6 5    xx
+                SUBC &RAM_LOCATION,0(r6) 6 6 5    xx
+               SUBC &FRAM_LOCATION,0(r6) 6 6 5    xx
+                  SUBC #42,&RAM_LOCATION 5 5 5
+                 SUBC #42,&FRAM_LOCATION 5 5 5
+                          SUBC #42,0(r6) 5 5 5
+         XOR &RAM_LOCATION,&RAM_LOCATION 6 6 5    xx
+        XOR &RAM_LOCATION,&FRAM_LOCATION 6 6 5    xx
+        XOR &FRAM_LOCATION,&RAM_LOCATION 6 6 5    xx
+       XOR &FRAM_LOCATION,&FRAM_LOCATION 6 6 5    xx
+                 XOR &RAM_LOCATION,0(r6) 6 6 5    xx
+                XOR &FRAM_LOCATION,0(r6) 6 6 5    xx
+                   XOR #42,&RAM_LOCATION 5 5 5
+                  XOR #42,&FRAM_LOCATION 5 5 5
+                           XOR #42,0(r6) 5 5 5
+         BIC &RAM_LOCATION,&RAM_LOCATION 6 6 5    xx
+        BIC &RAM_LOCATION,&FRAM_LOCATION 6 6 5    xx
+        BIC &FRAM_LOCATION,&RAM_LOCATION 6 6 5    xx
+       BIC &FRAM_LOCATION,&FRAM_LOCATION 6 6 5    xx
+                 BIC &RAM_LOCATION,0(r6) 6 6 5    xx
+                BIC &FRAM_LOCATION,0(r6) 6 6 5    xx
+                   BIC #42,&RAM_LOCATION 5 5 5
+                  BIC #42,&FRAM_LOCATION 5 5 5
+                           BIC #42,0(r6) 5 5 5
+         BIT &RAM_LOCATION,&RAM_LOCATION 5 5 4    xx
+        BIT &RAM_LOCATION,&FRAM_LOCATION 5 5 4    xx
+        BIT &FRAM_LOCATION,&RAM_LOCATION 5 5 4    xx
+       BIT &FRAM_LOCATION,&FRAM_LOCATION 5 5 4    xx
+                 BIT &RAM_LOCATION,0(r6) 5 5 4    xx
+                BIT &FRAM_LOCATION,0(r6) 5 5 4    xx
+                   BIT #42,&RAM_LOCATION 4 4 4
+                  BIT #42,&FRAM_LOCATION 4 4 4
+                           BIT #42,0(r6) 4 4 4
+        DADD &RAM_LOCATION,&RAM_LOCATION 6 6 5    xx
+       DADD &RAM_LOCATION,&FRAM_LOCATION 6 6 5    xx
+       DADD &FRAM_LOCATION,&RAM_LOCATION 6 6 5    xx
+      DADD &FRAM_LOCATION,&FRAM_LOCATION 6 6 5    xx
+                DADD &RAM_LOCATION,0(r6) 6 6 5    xx
+               DADD &FRAM_LOCATION,0(r6) 6 6 5    xx
+                  DADD #42,&RAM_LOCATION 5 5 5
+                 DADD #42,&FRAM_LOCATION 5 5 5
+                          DADD #42,0(r6) 5 5 5
+         BIS &RAM_LOCATION,&RAM_LOCATION 6 6 5    xx
+        BIS &RAM_LOCATION,&FRAM_LOCATION 6 6 5    xx
+        BIS &FRAM_LOCATION,&RAM_LOCATION 6 6 5    xx
+       BIS &FRAM_LOCATION,&FRAM_LOCATION 6 6 5    xx
+                 BIS &RAM_LOCATION,0(r6) 6 6 5    xx
+                BIS &FRAM_LOCATION,0(r6) 6 6 5    xx
+                   BIS #42,&RAM_LOCATION 5 5 5
+                  BIS #42,&FRAM_LOCATION 5 5 5
+                           BIS #42,0(r6) 5 5 5
+         CMP &RAM_LOCATION,&RAM_LOCATION 5 5 4    xx
+        CMP &RAM_LOCATION,&FRAM_LOCATION 5 5 4    xx
+        CMP &FRAM_LOCATION,&RAM_LOCATION 5 5 4    xx
+       CMP &FRAM_LOCATION,&FRAM_LOCATION 5 5 4    xx
+                 CMP &RAM_LOCATION,0(r6) 5 5 4    xx
+                CMP &FRAM_LOCATION,0(r6) 5 5 4    xx
+                   CMP #42,&RAM_LOCATION 4 4 4
+                  CMP #42,&FRAM_LOCATION 4 4 4
+                           CMP #42,0(r6) 4 4 4

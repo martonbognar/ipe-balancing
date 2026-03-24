@@ -1,0 +1,7 @@
+MSP430: Locality results: 5 4 4 4 | 5 4 4 4 | 5 4 4 4
+
+MSP430: Replacement results: 4 5
+
+MSP430: Write results: 5 5 5
+
+MSP430: Code results: 4 4 5 | 4 4 4 | 5 4 5 | 4 4 4

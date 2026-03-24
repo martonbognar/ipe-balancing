@@ -1,0 +1,21 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "profiler_nemesis",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "profiler_nemesis",
+                "resourceId": "/profiler_nemesis"
+            },
+            "debuggerSettings": {
+                "targetConfigs/MSP430FR5969.ccxml": {
+                    "TI MSP430 USB1/MSP430": {
+                        "data": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?>\n<PropertyValues>\n\n  <property id=\"IPEraseOnConnect\">\n    <curValue>1</curValue>\n  </property>\n\n</PropertyValues>\n"
+                    }
+                }
+            }
+        }
+    ]
+}

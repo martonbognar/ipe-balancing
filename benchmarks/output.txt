@@ -1,0 +1,94 @@
+
+MSP430: bsl 1:   Baseline 820, Linear 1295, Balanced 946
+
+MSP430: bsl 2:   Baseline 832, Linear 1295, Balanced 946
+
+MSP430: bsl 3:   Baseline 856, Linear 1295, Balanced 946
+
+MSP430: bsl 4:   Baseline 880, Linear 1295, Balanced 946
+
+MSP430: mulhi3 1:        Baseline 491, Linear 1637, Balanced 1200
+
+MSP430: mulhi3 2:        Baseline 528, Linear 1637, Balanced 1200
+
+MSP430: mulhi3 3:        Baseline 715, Linear 1639, Balanced 1202
+
+MSP430: mulhi3 4:        Baseline 789, Linear 1639, Balanced 1202
+
+MSP430: mulmod8 1:       Baseline 60, Linear 493, Balanced 372
+
+MSP430: mulmod8 2:       Baseline 68, Linear 493, Balanced 372
+
+MSP430: mulmod8 3:       Baseline 92, Linear 493, Balanced 372
+
+MSP430: sharevalue 1:    Baseline 221, Linear 3523, Balanced 3423
+
+MSP430: sharevalue 2:    Baseline 234, Linear 3523, Balanced 3423
+
+MSP430: switch16 0:      Baseline 28, Linear 429, Balanced 40
+
+MSP430: switch16 1:      Baseline 40, Linear 429, Balanced 40
+
+MSP430: switch16 2:      Baseline 40, Linear 429, Balanced 40
+
+MSP430: switch16 3:      Baseline 41, Linear 429, Balanced 40
+
+MSP430: switch16 4:      Baseline 40, Linear 429, Balanced 40
+
+MSP430: switch16 5:      Baseline 41, Linear 429, Balanced 40
+
+MSP430: switch16 6:      Baseline 41, Linear 429, Balanced 40
+
+MSP430: switch16 7:      Baseline 41, Linear 429, Balanced 40
+
+MSP430: switch16 8:      Baseline 40, Linear 429, Balanced 40
+
+MSP430: switch16 9:      Baseline 41, Linear 429, Balanced 40
+
+MSP430: switch16 10:     Baseline 41, Linear 429, Balanced 40
+
+MSP430: switch16 11:     Baseline 41, Linear 429, Balanced 40
+
+MSP430: switch16 12:     Baseline 41, Linear 429, Balanced 40
+
+MSP430: switch16 13:     Baseline 41, Linear 429, Balanced 40
+
+MSP430: switch16 14:     Baseline 41, Linear 429, Balanced 40
+
+MSP430: switch16 15:     Baseline 41, Linear 429, Balanced 40
+
+MSP430: switch16 16:     Baseline 41, Linear 429, Balanced 40
+
+MSP430: switch8 0:       Baseline 28, Linear 429, Balanced 40
+
+MSP430: switch8 1:       Baseline 40, Linear 429, Balanced 40
+
+MSP430: switch8 2:       Baseline 40, Linear 429, Balanced 40
+
+MSP430: switch8 3:       Baseline 41, Linear 429, Balanced 40
+
+MSP430: switch8 4:       Baseline 40, Linear 429, Balanced 40
+
+MSP430: switch8 5:       Baseline 41, Linear 429, Balanced 40
+
+MSP430: switch8 6:       Baseline 41, Linear 429, Balanced 40
+
+MSP430: switch8 7:       Baseline 41, Linear 429, Balanced 40
+
+MSP430: switch8 8:       Baseline 40, Linear 429, Balanced 40
+
+MSP430: switch8 9:       Baseline 41, Linear 429, Balanced 40
+
+MSP430: switch8 10:      Baseline 41, Linear 429, Balanced 40
+
+MSP430: switch8 11:      Baseline 41, Linear 429, Balanced 40
+
+MSP430: switch8 12:      Baseline 41, Linear 429, Balanced 40
+
+MSP430: switch8 13:      Baseline 41, Linear 429, Balanced 40
+
+MSP430: switch8 14:      Baseline 41, Linear 429, Balanced 40
+
+MSP430: switch8 15:      Baseline 41, Linear 429, Balanced 40
+
+MSP430: switch8 16:      Baseline 41, Linear 429, Balanced 40

@@ -1,0 +1,115 @@
+from enum import Enum
+import os
+
+'''
+From <https://en.wikipedia.org/wiki/TI_MSP430#MSP430_CPU>
+
+MSP430 addressing modes
+--------------------------------------------------------------------------------
+As 	Ad 	Register 	Syntax 	Description
+--------------------------------------------------------------------------------
+00 	0 	n 	        Rn 	Register direct. The operand is the
+                                        contents of Rn.
+01 	1 	n 	        x(Rn) 	Indexed. The operand is in memory at
+                                        address Rn+x.
+10 	— 	n 	        @Rn 	Register indirect. The operand is in
+                                        memory at the address held in Rn.
+11 	— 	n 	        @Rn+ 	Indirect autoincrement. As above, then
+                                        the register is incremented by 1 or 2.
+--------------------------------------------------------------------------------
+
+Addressing modes using R0 (PC)
+--------------------------------------------------------------------------------
+As 	Ad 	Register 	Syntax 	Description
+--------------------------------------------------------------------------------
+01 	1 	0 (PC) 	        ADDR 	Symbolic. Equivalent to x(PC). The
+                                        operand is in memory at address PC+x.
+11 	— 	0 (PC) 	        #x 	Immediate. Equivalent to @PC+. The
+                                        operand is the next word in the
+                                        instruction stream.
+--------------------------------------------------------------------------------
+
+Addressing modes using R2 (SR) and R3 (CG), special-case decoding
+--------------------------------------------------------------------------------
+As 	Ad 	Register 	Syntax 	Description
+--------------------------------------------------------------------------------
+01 	1 	2 (SR) 	        &ADDR 	Absolute. The operand is in memory at
+                                        address x.
+10 	— 	2 (SR) 	        #4 	Constant. The operand is the constant 4.
+11 	— 	2 (SR) 	        #8 	Constant. The operand is the constant 8.
+00 	— 	3 (CG) 	        #0 	Constant. The operand is the constant 0.
+01 	— 	3 (CG) 	        #1 	Constant. The operand is the constant 1.
+                                        There is no index word.
+10 	— 	3 (CG) 	        #2 	Constant. The operand is the constant 2.
+11 	— 	3 (CG) 	        #−1 	Constant. The operand is the constant −1.
+--------------------------------------------------------------------------------
+'''
+
+'''
+    https://github.com/llvm-mirror/llvm/blob/master/lib/Target/MSP430/MSP430InstrFormats.td#L17
+'''
+
+SOURCE_REPRESENTATIVES = {
+    'Rm': 'r5',
+    'PC': 'r0',
+    '@Rn': '@r6',
+    '@Rn+': '@r6+',
+    '#N': '#42',
+    '#1': '#1',
+    'x(Rn)': '2(r6)',
+    '&EDE': '&FRAM_LOCATION',
+    '': '',
+}
+
+DEST_REPRESENTATIVES = {
+    'Rm': 'r5',
+    'PC': 'r0',
+    '@Rn': '@r6',
+    '@Rn+': '@r6+',
+    '#N': '#42',
+    '#1': '#1',
+    'x(Rn)': '0(r6)',
+    '&EDE': '&FRAM_LOCATION',
+    '': '',
+}
+
+class MSP430AS(Enum):
+    DIRECT       = 'Rm'
+    INDEXED      = 'x(Rn)'
+    INDIRECT     = '@Rn'
+    INDIRECT_INC = '@Rn+'
+    SYMBOLIC     = 'EDE'
+    IMMEDIATE    = '#N'
+    ABSOLUTE     = '&EDE'
+    CONSTANT     = '#1'
+
+    def __str__(self):
+        return self.value
+
+class MSP430AD(Enum):
+    DIRECT       = 'Rm'
+    INDEXED      = 'x(Rn)'
+    SYMBOLIC     = 'EDE'
+    ABSOLUTE     = '&EDE'
+
+    def __str__(self):
+        return self.value
+
+
+def find_profiles(opcode: str, source: MSP430AS | str, dest: MSP430AD | str) -> tuple[int, int]:
+    if type(source) == MSP430AS:
+        source = SOURCE_REPRESENTATIVES[source.value]
+    if type(dest) == MSP430AD:
+        dest = DEST_REPRESENTATIVES[dest.value]
+    if '.' in opcode:
+        opcode = opcode.split('.')[0]
+    for line in open(os.path.join(os.path.dirname(__file__), '../../../scripts/compare_output.txt')):
+        comp = line.split()
+        opcode_match = opcode.upper() == comp[0].upper()
+        params = comp[1].split(',')
+        params_match = (source == '' or source.upper() == params[0].upper()) and (dest == '' or (len(params) > 1 and dest.upper() == params[1].upper()))
+        if opcode_match and params_match:
+            basic_cycle = int(comp[3])
+            nemesis_cycle = int(comp[4])
+            return (basic_cycle, nemesis_cycle)
+    raise ValueError(f"Instruction not found in profiling: {opcode} {source} {dest}")

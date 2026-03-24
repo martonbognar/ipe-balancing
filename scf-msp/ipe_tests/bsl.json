@@ -1,0 +1,17 @@
+{
+	"file": "../benchmarks/Debug/benchmarks.out",
+	"starting_function": "bsl",
+	"timing_sensitive": true,
+	"parameters": [
+		{
+			"size": 1,
+			"confidential": true
+		}
+	],
+	"memory": true,
+	"result": {
+		"size": 1,
+		"confidential": true,
+		"memory": true
+	}
+}

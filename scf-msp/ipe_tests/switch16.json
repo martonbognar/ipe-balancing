@@ -1,0 +1,17 @@
+{
+	"file": "../benchmarks/Debug/benchmarks.out",
+	"starting_function": "switch16",
+	"timing_sensitive": true,
+	"parameters": [
+		{
+			"size": 1,
+			"confidential": true
+		}
+	],
+	"memory": false,
+	"result": {
+		"size": 1,
+		"confidential": true,
+		"memory": false
+	}
+}
