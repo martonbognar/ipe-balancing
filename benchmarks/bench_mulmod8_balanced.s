@@ -208,7 +208,7 @@ _nds___mspabi_mpyi_mb:
 	ADD.W	R12, R14
 	JMP .MPY5
 .MPY4:
-	MOV.B R9, R9
+	MOV.W R9, R9
 	JMP	.MPY5
 .MPY5:
 	ADD.W	R12, R12

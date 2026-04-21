@@ -106,5 +106,5 @@ __mspabi_mpyi_sharevalue:
 	MOV.B	#0, R11
 	JMP	.MPY3
 .MPY4:
-	MOV.B R9, R9
+	MOV.W R9, R9
 	JMP	.MPY5
