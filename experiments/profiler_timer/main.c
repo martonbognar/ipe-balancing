@@ -14,10 +14,6 @@ uint16_t *three_latencies = &latencies_3;
 int main(void)
 {
     WDTCTL = WDTPW | WDTHOLD;	// stop watchdog timer
-    MPUCTL0 = MPUPW;
-    MPUSEGB2 = 0x0000;
-    MPUSEGB1 = 0x0000;
-    MPUSAM = 0x7777;
 
     profile();
 
